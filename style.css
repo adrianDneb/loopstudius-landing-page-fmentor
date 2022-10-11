@@ -1,0 +1,613 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: hsl(0, 0%, 100%);
+}
+
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,
+p,
+li {
+    font-family: 'Alata', sans-serif;
+    color: hsl(0, 0%, 100%);
+    font-size: 0.9375rem;
+}
+
+.main_container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.nav_links li {
+    position: relative;
+}
+
+.nav_links li::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transform: translate(-50%);
+    background: white;
+    transition: 0.5s;
+}
+
+.nav_links li:hover::after {
+    width: 25px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.mobile_nav {
+    display: none;
+}
+
+.mobile_menu {
+    display: none;
+}
+
+.nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 0 0;
+    margin: 0 auto 10% auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*hero nav*/
+header {
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
+        url("images/desktop/image-hero.jpg");
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    margin-left: auto;
+    padding: 65px 12%;
+}
+
+
+ul.nav_links {
+    display: flex;
+    flex-direction: row;
+    gap: 5vh;
+}
+
+.hero_desc h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 8.6vh;
+    font-weight: 300;
+    padding: 4.5vh;
+    max-width: 650px;
+    border: solid 2px white;
+    margin-bottom: 5%;
+}
+
+/*sect2*/
+.main_wrapper {
+    position: relative;
+    padding: 0 12%;
+    margin: 10% auto 0 auto;
+}
+
+.sect2_desc h1 {
+    color: hsl(0, 0%, 14%);
+    font-size: 5.7vh;
+    font-weight: 300;
+}
+
+.sect2_desc p {
+    color: hsl(0, 0%, 55%);
+}
+
+.sect2 {
+    position: relative;
+}
+
+.sect2_image img {
+
+    display: block;
+}
+
+.sect2_desc_wrapper {
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    width: 49%;
+    height: 19.67rem;
+    right: 0;
+    top: 37%;
+    padding-bottom: 5%;
+}
+
+.sect2_desc {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    padding-top: 17%;
+    padding-left: 17%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sect2_desc p {
+    width: 82%;
+}
+
+/*sect3*/
+.sect3 {
+    margin-top: 15%;
+    position: relative;
+}
+
+.sect3_head_wrap h1 {
+    color: hsl(0, 0%, 14%);
+    font-size: 2.9rem;
+    font-weight: 300;
+}
+
+.gallery_btn {
+    top: 0;
+    right: 0;
+    position: absolute;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 14%);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Alata', sans-serif;
+    letter-spacing: 3px;
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 3px;
+    padding: 8px 40px;
+    cursor: pointer;
+}
+
+.gallery_btn:hover {
+    background-color: hsl(0, 0%, 14%);
+    color: white;
+    border: 2px solid hsl(0, 0%, 14%);
+}
+
+.gallery_btn:active {
+    background-color: hsl(0, 0%, 41%);
+    color: white;
+    border: 2px solid hsl(0, 0%, 41%);
+}
+
+.sect3_gallery {
+    margin-top: 7%;
+}
+
+.sect3_gallery_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    place-content: center;
+    gap: 30px 30px;
+}
+
+.grid_item {
+    position: relative;
+    height: 450px;
+    cursor: pointer;
+}
+
+.grid_item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.grid_item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent, hsl(0, 0%, 13%));
+}
+
+.grid_item:hover::after {
+    background: linear-gradient(180deg, rgba(253, 253, 253, 0.514), hsl(0, 0%, 25%));
+    cursor: pointer;
+}
+
+.grid_item h2 {
+    position: absolute;
+    bottom: 35px;
+    left: 40px;
+    color: hsl(0, 0%, 100%);
+    font-size: 2rem;
+    font-weight: 300;
+    z-index: 5;
+}
+
+.grid_item:hover h2 {
+    color: hsl(0, 0%, 0%);
+}
+
+/*sect4*/
+
+footer {
+    margin-top: 12%;
+    background-color: hsl(0, 0%, 0%);
+    padding: 4rem 12% 1rem 12%;
+}
+
+.sect4_head ul.nav_links {
+    gap: 30px;
+}
+
+.sect4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.sect4_head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.socmed_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 20px;
+}
+
+
+.foot_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.foot_nav p {
+    text-align: right;
+}
+
+.attribution {
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.attribution p,
+.attribution a,
+.foot_nav p {
+    color: hsl(0, 0%, 55%);
+}
+
+.socmed_icons li {
+    cursor: pointer;
+    position: relative;
+}
+
+
+.socmed_icons li::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    transform: translate(-50%);
+    background: white;
+    transition: 0.5s;
+}
+
+.socmed_icons li:hover::after {
+    width: 25px;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 1000px) {
+
+    ul.nav_links {
+        gap: 3vh;
+    }
+
+    .sect2_desc_wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+        right: 0;
+        top: 37%;
+        text-align: center;
+    }
+
+    .sect2_image img {
+        width: 100%;
+    }
+
+    .sect2_desc {
+        margin: auto;
+        width: 100%;
+        height: auto;
+        padding-top: 5vh;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .sect2_desc h1 {
+        width: 73%;
+    }
+
+    .sect2_desc p {
+        width: 82%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    header {
+        background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
+            url("images/desktop/image-hero.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        margin: auto;
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+
+    .mobile_nav {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hero_desc h1,
+    .sect2_desc h1,
+    .sect3_head_wrap h1 {
+        font-size: 7vh;
+    }
+
+    .nav {
+        box-sizing: border-box;
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: black;
+        margin: 0;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        padding: 30px;
+        transition: .25s;
+        z-index: 10;
+    }
+
+    .gallery_btn {
+        position: static;
+        display: block;
+        width: max-content;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .sect3_head_wrap h1 {
+        text-align: center;
+    }
+
+    .nav.active {
+        left: 0;
+    }
+
+    .mobile_nav {
+        display: flex;
+        position: absolute;
+        flex-direction: row;
+        top: 40px;
+        left: 30px;
+        right: 30px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav ul.nav_links {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .nav ul.nav_links li a {
+        color: white;
+        font-weight: lighter;
+        font-size: 3.5vh;
+        text-transform: uppercase;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .sect2_image img {
+        width: 100%;
+    }
+
+    .nav_logo img {
+        max-width: 145px;
+    }
+
+}
+
+@media screen and (max-width: 750px) {
+    header {
+        background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
+            url("images/mobile/image-hero.jpg");
+    }
+
+    .hero_desc h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .hero_desc h1,
+    .sect2_desc h1,
+    .sect3_head_wrap h1 {
+        font-size: 6vh;
+    }
+
+    footer {
+        margin-top: 10%;
+        background-color: hsl(0, 0%, 0%);
+        padding: 4rem 12% 1rem 12%;
+    }
+
+    .sect4_head ul.nav_links {
+        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .sect4_head ul.nav_links li a {
+        font-size: 1rem;
+    }
+
+    .sect4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 60px;
+    }
+
+    .sect4_head {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .socmed_icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .foot_nav {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sect3_head_wrap h1 {
+        text-align: center;
+    }
+
+    .foot_nav p {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .hero_desc h1,
+    .sect2_desc h1,
+    .sect3_head_wrap h1 {
+        font-size: 4vh;
+    }
+
+    .gallery_btn {
+        position: static;
+        display: block;
+        width: max-content;
+        margin: auto;
+        margin-top: 10%;
+    }
+
+    .sect2_desc h1 {
+        width: 85%;
+    }
+
+    .sect2_desc p {
+        width: 85%;
+    }
+
+    .sect3_gallery_grid {
+        grid-gap: 25px;
+    }
+
+    .grid_item {
+        height: 100%;
+    }
+
+    .grid_item h3 {
+        bottom: 15px;
+        left: 20px;
+    }
+
+    .products-grid {
+        grid-gap: 25px;
+    }
+
+    .product-card {
+        height: 117px;
+    }
+
+    .product-card h3 {
+        bottom: 15px;
+        left: 20px;
+    }
+
+    .foot_nav p {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .hero_desc h1,
+    .sect2_desc h1,
+    .sect3_head_wrap h1 {
+        font-size: 3.5vh;
+    }
+}
